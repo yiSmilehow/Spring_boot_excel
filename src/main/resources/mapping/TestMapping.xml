@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 配置命名空间，区别名称 -->
+<mapper namespace="com.test.mapper.TestMapper">
+
+    <!-- 查询 -->
+    <select id="queryTest" resultType="Test">
+		select * from test_spring
+	</select>
+
+    <insert id="addTest" parameterType="com.test.pojo.Test">
+		insert into test_spring(`name`,age) values (#{name},#{age})
+	</insert>
+
+</mapper>
